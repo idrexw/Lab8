@@ -41,4 +41,21 @@ class CalculatorTest {
                 () -> assertThrows(RuntimeException.class, () -> Calculator.divide(5.0, 0.0))
         );
     }
+
+    @Test
+    @DisplayName("add(int): add two integer numbers")
+    void addInt() {
+        assertAll(
+                () -> assertEquals(5, Calculator.add(2, 3)),
+                () -> assertEquals(-1, Calculator.add(2, -3))
+        );
+    }
+
+    @Test
+    @DisplayName("multiply(int): multiply two integer numbers")
+    void multiplyInt() {
+        assertAll(
+                () -> assertEquals(6, Calculator.multiply(2, 3))
+        );
+    }
 }
