@@ -21,7 +21,8 @@ class CalculatorTest {
     @DisplayName("multiply(): multiply two numbers")
     void multiply() {
         assertAll(
-                () -> assertEquals(0, Calculator.multiply(-3, 0))
+                // Adding 0.0001 as the "delta" allows 0.0 and -0.0 to be equal
+                () -> assertEquals(0.0, Calculator.multiply(-3.0, 0.0), 0.0001)
         );
     }
 
