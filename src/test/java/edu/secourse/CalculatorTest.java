@@ -24,4 +24,12 @@ class CalculatorTest {
                 () -> assertEquals(0, Calculator.multiply(-3, 0))
         );
     }
+
+    @Test
+    @DisplayName("sqrt(): square root one number")
+    void sqrt() {
+        assertAll(
+                () -> assertEquals(2, Calculator.sqrt(4))
+        );
+    }
 }
