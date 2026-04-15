@@ -12,4 +12,11 @@ public class Calculator {
     public static double sqrt(double i) {
         return Math.sqrt(i);
     }
+
+    public static double divide(double a, double b) {
+        if (b == 0.0) {
+            throw new RuntimeException("Cannot divide by zero");
+        }
+        return a / b;
+    }
 }

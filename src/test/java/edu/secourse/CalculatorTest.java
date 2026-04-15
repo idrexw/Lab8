@@ -32,4 +32,12 @@ class CalculatorTest {
                 () -> assertEquals(2, Calculator.sqrt(4))
         );
     }
+    @Test
+    @DisplayName("divide(): divide two double numbers")
+    void divide() {
+        assertAll(
+                () -> assertEquals(2.5, Calculator.divide(5.0, 2.0), 0.0001),
+                () -> assertThrows(RuntimeException.class, () -> Calculator.divide(5.0, 0.0))
+        );
+    }
 }
